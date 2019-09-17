@@ -42,11 +42,15 @@ class Curator
   def artists_with_multiple_photographs
     artists = []
     @photographs.each do |photo|
-      photo.artist_id
-      find_artist_by_id(artist)
+      artists = photo.artist_id
+      # find_artist_by_id(artist)
     end
     artists
-  end 
-      # require'pry';binding.pry
+    @artists.each do |artist|
+      require'pry';binding.pry
+      artist.id 
+    end
+    artists
+  end
 
 end
