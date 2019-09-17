@@ -14,4 +14,12 @@ class Curator
   def add_artist(artist)
     @artists << artist
   end
+
+  def find_artist_by_id(id)
+    found = []
+    @artists.each do |artist|
+      found << artist if artist.id == id
+    end
+    found
+  end
 end
