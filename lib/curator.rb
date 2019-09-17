@@ -30,4 +30,13 @@ class Curator
     end
     found
   end
+
+  def find_photographs_by_artist(artist)
+    return_photos = []
+    @photographs.each do |photo|
+      # require'pry';binding.pry
+      return_photos << photo if photo.artist_id  == artist.id
+    end
+    return_photos
+  end
 end
